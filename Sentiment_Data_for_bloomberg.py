@@ -4,12 +4,13 @@ def sentiment_data():
     import pandas as pd
     import numpy as np
     import re
+    import os
     
 
-    consumerKey = "CaS1TQ1UfzIwAJLXcX59jOW3W"
-    consumerSecret = "5PN9tjBd4uoi6MXlla6Mpmzlpa5TSeepavAxcjMQkgODxe63sV"
-    accessToken = "464234785-n6F8IjiJk0bXf3I6uCh7NuMCW0LpxI6FyDSS1mrf"
-    accessTokenSecret = "xxHJmy4Li7LsH8FSkMeOnfgch1UTd7H5G4lwBgbXaKF3v"
+    consumerKey = os.getenv("consumerKey")
+    consumerSecret = os.getenv("consumerSecret")
+    accessToken = os.getenv("accessToken")
+    accessTokenSecret = os.getenv("accessTokenSecret")
 
     authenticate = tweepy.OAuthHandler(consumerKey, consumerSecret)
 
